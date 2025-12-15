@@ -88,6 +88,13 @@ body.dark-mode .carousel-nav-btn:hover {
 body.dark-mode .theme-toggle {
   color: #e5e7eb;
 }
+#themeToggle{
+    background-color: var(--blue) !important;
+    margin-bottom: 5rem !important;
+}
+#themeToggle:hover{
+    background-color: white;;
+}
 
 
 /* =====================
