@@ -35,6 +35,10 @@
         <a href="#projects" class="btn btn-primary">Projects</a>
         <a href="#contact" class="btn btn-secondary">Contact</a>
       </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+  🌙
+</button>
+
     </nav>
 
 
@@ -66,47 +70,233 @@
 
 
 
-  <!-- services Section -->
+
+
+
   <div id="services">
     <h1>Our <span id="highlighted">Services</span></h1>
-    <section class="boxes">
-      <div class="box">
-        <i class="fa-solid fa-code fa-4x"></i>
-        <h3>Custom Development</h3>
-        <p>
-          Hand-coded, fully custom websites built for speed,
-          performance, and a professional look.
-        </p>
+    <p class="section-subtitle">Comprehensive web solutions for your business growth</p>
+
+    <div class="services-carousel-container">
+      <!-- Carousel Navigation Buttons -->
+      <button class="carousel-nav-btn prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-nav-btn next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Carousel Track -->
+      <div class="services-carousel-track">
+        <!-- Slide 1 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-code fa-4x"></i>
+            <h3>Custom Development</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Hand-coded from scratch</li>
+              <li><i class="fa-solid fa-check"></i> No template limitations</li>
+              <li><i class="fa-solid fa-check"></i> Optimized for speed</li>
+              <li><i class="fa-solid fa-check"></i> Clean, maintainable code</li>
+              <li><i class="fa-solid fa-check"></i> Future-proof architecture</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-globe fa-4x"></i>
+            <h3>Responsive Design</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Mobile-first approach</li>
+              <li><i class="fa-solid fa-check"></i> Tablet optimized</li>
+              <li><i class="fa-solid fa-check"></i> Desktop perfection</li>
+              <li><i class="fa-solid fa-check"></i> Cross-browser compatible</li>
+              <li><i class="fa-solid fa-check"></i> Touch-friendly navigation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-rocket fa-4x"></i>
+            <h3>SEO Friendly</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Google-friendly structure</li>
+              <li><i class="fa-solid fa-check"></i> Meta tags optimization</li>
+              <li><i class="fa-solid fa-check"></i> Fast loading speeds</li>
+              <li><i class="fa-solid fa-check"></i> Mobile SEO ready</li>
+              <li><i class="fa-solid fa-check"></i> Local SEO setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-headset fa-4x"></i>
+            <h3>Ongoing Support</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> 30-day free support</li>
+              <li><i class="fa-solid fa-check"></i> Bug fixes & updates</li>
+              <li><i class="fa-solid fa-check"></i> Performance monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Security updates</li>
+              <li><i class="fa-solid fa-check"></i> Training & guidance</li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <!-- slide 4.5 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa fa-user fa-4x"></i>
+            <h3>International Client</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> intenational cutomer Service</li>
+              <li><i class="fa-solid fa-check"></i> card payment</li>
+              <li><i class="fa-solid fa-check"></i> Language: English</li>
+              <li><i class="fa-solid fa-check"></i> Contact via WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Direct Messege Facility</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-brands fa-whatsapp fa-4x"></i>
+            <h3>WhatsApp Integration</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> WhatsApp chat widget</li>
+              <li><i class="fa-solid fa-check"></i> Click-to-chat buttons</li>
+              <li><i class="fa-solid fa-check"></i> Business profile setup</li>
+              <li><i class="fa-solid fa-check"></i> Quick reply templates</li>
+              <li><i class="fa-solid fa-check"></i> Lead collection system</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-bolt fa-4x"></i>
+            <h3>Fast Delivery</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> 72-hour websites</li>
+              <li><i class="fa-solid fa-check"></i> Quick turnaround</li>
+              <li><i class="fa-solid fa-check"></i> Rapid revisions</li>
+              <li><i class="fa-solid fa-check"></i> Express launch</li>
+              <li><i class="fa-solid fa-check"></i> Priority support</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-shield-alt fa-4x"></i>
+            <h3>Security & Maintenance</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> SSL certificate setup</li>
+              <li><i class="fa-solid fa-check"></i> Regular backups</li>
+              <li><i class="fa-solid fa-check"></i> Security monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Performance optimization</li>
+              <li><i class="fa-solid fa-check"></i> Monthly care plans</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-chart-line fa-4x"></i>
+            <h3>Analytics & Insights</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Google Analytics setup</li>
+              <li><i class="fa-solid fa-check"></i> Visitor tracking</li>
+              <li><i class="fa-solid fa-check"></i> Conversion tracking</li>
+              <li><i class="fa-solid fa-check"></i> Monthly reports</li>
+              <li><i class="fa-solid fa-check"></i> Performance insights</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="service-slide">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h3>Local Payment Gateway Setup</h3>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> bKash payment integration</li>
+              <li><i class="fas fa-check"></i> Nagad payment options</li>
+              <li><i class="fas fa-check"></i> Bank transfer forms</li>
+              <li><i class="fas fa-check"></i> Payment confirmation system</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="service-slide">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <h3>Link-in-Bio Website</h3>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> Mobile-optimized single page</li>
+              <li><i class="fas fa-check"></i> Social media icons</li>
+              <li><i class="fas fa-check"></i> Custom domain included</li>
+              <li><i class="fas fa-check"></i> Analytics dashboard</li>
+              <li class="price"><i class="fas fa-tag"></i> ৳4,500</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="service-slide">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3>Speed Boost Service</h3>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> Image optimization</li>
+              <li><i class="fas fa-check"></i> Code minification</li>
+              <li><i class="fas fa-check"></i> Caching setup</li>
+              <li><i class="fas fa-check"></i> Google PageSpeed 90+ score</li>
+              <li class="price"><i class="fas fa-tag"></i> ৳3,500 one-time</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="service-slide">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-pen-fancy"></i>
+            </div>
+            <h3>Content + Website Bundle</h3>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> Professional content writing</li>
+              <li><i class="fas fa-check"></i> SEO-optimized copy</li>
+              <li><i class="fas fa-check"></i> Image selection & optimization</li>
+              <li><i class="fas fa-check"></i> Social media descriptions</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="box">
-        <i class="fa-solid fa-globe fa-4x"></i>
-        <h3>Responsive Design</h3>
-        <p>
-          Your website will look perfect on mobile,
-          tablet, and desktop devices.
-        </p>
-      </div>
-
-      <div class="box">
-        <i class="fa-solid fa-rocket fa-4x"></i>
-        <h3>SEO Friendly</h3>
-        <p>
-          Built with SEO best practices to help
-          your business rank better on Google.
-        </p>
-      </div>
-
-      <div class="box">
-        <i class="fa-solid fa-headset fa-4x"></i>
-        <h3>Ongoing Support</h3>
-        <p>
-          We provide updates, fixes, and technical support
-          even after your website is live.
-        </p>
-      </div>
-    </section>
+      <!-- Carousel Dots Indicator -->
+      <div class="services-carousel-dots"></div>
+    </div>
   </div>
+
 
 
 
@@ -195,92 +385,6 @@
 
       <!-- Dots -->
       <div class="carousel-dots"></div>
-    </div>
-  </section>
-
-
-  <section class="contact" id="contact">
-    <div class="container">
-
-      <h2 class="section-title">Contact <span id="highlighted">us</span></h2>
-      <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
-
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <h3>Email</h3>
-              <a href="mailto:abrarilhamprogrammer@gmail.com">abrarilhamprogrammer@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-text">
-              <h3>Phone</h3>
-              <a href="tel:+8801330910019">+880 1330910019</a>
-            </div>
-          </div>
-
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-text">
-              <h3>Location</h3>
-              <!-- <p>Chaittagong, Bangladesh</p> -->
-              <a href="">Bangladesh, Chaittagong</a>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a href="https://www.facebook.com/ahmed.abrar.ilham" class="social-link" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/AhmedAbrar_13" class="social-link" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com/Programmer-AAI" class="social-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com" class="social-link" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xldgzved" method="POST">
-          <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-            <span id="nameError" class="error-message"></span>
-          </div>
-
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-            <span id="emailError" class="error-message"></span>
-          </div>
-
-          <div class="form-group">
-            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
-            <span id="messageError" class="error-message"></span>
-          </div>
-
-          <button type="submit" class="btn btn-secondary">Send Message</button>
-
-          <div id="loadingSpinner" class="loading-spinner">
-            <div class="spinner"></div>
-          </div>
-
-          <div id="successMessage" class="success-message">
-            Message sent successfully! I'll get back to you soon.
-          </div>
-        </form>
-      </div>
     </div>
   </section>
 
@@ -406,30 +510,168 @@
 
 
 
-<!-- step progress section -->
-<div class="step-progress-wrapper" id="stepBar">
-  <div class="step-progress">
-    <div class="step active">
-      <span>1</span>
-      <p>Plan</p>
-    </div>
+  <!-- step progress section -->
+  <div class="step-progress-wrapper" id="stepBar">
+    <div class="step-progress">
+      <div class="step active">
+        <span>1</span>
+        <p>Plan</p>
+      </div>
 
-    <div class="line"></div>
+      <div class="line"></div>
 
-    <div class="step">
-      <span>2</span>
-      <p>Details</p>
-    </div>
+      <div class="step">
+        <span>2</span>
+        <p>Details</p>
+      </div>
 
-    <div class="line"></div>
+      <div class="line"></div>
 
-    <div class="step">
-      <span>3</span>
-      <p>Confirm</p>
+      <div class="step">
+        <span>3</span>
+        <p>Confirm</p>
+      </div>
     </div>
   </div>
-</div>
 
+
+
+
+  <!-- contact section -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <h2 class="section-title">Contact <span id="highlighted">us</span></h2>
+      <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <a href="mailto:abrarilhamprogrammer@gmail.com">abrarilhamprogrammer@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Phone</h3>
+              <a href="tel:+8801330910019">+880 1330910019</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Location</h3>
+              <!-- <p>Chaittagong, Bangladesh</p> -->
+              <a href="">Bangladesh, Chaittagong</a>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/ahmed.abrar.ilham" class="social-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/AhmedAbrar_13" class="social-link" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/Programmer-AAI" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xldgzved" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            <span id="nameError" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            <span id="emailError" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+            <span id="messageError" class="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-secondary">Send Message</button>
+
+          <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+          </div>
+
+          <div id="successMessage" class="success-message">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- review section -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2>What Our <span class="highlight">Clients Say</span></h2>
+      <p class="section-desc">Trusted by small businesses and creators across Bangladesh</p>
+
+      <div class="review-carousel">
+        <button class="review-btn prev">❮</button>
+        <button class="review-btn next">❯</button>
+
+        <div class="review-track">
+          <!-- Review 1 -->
+          <div class="review-card active">
+            <p class="review-text">
+              They delivered a clean, fast website exactly as promised. Very professional and responsive.
+            </p>
+            <img src="images/myImg.png" alt="">
+            <h4>Rahim Ahmed</h4>
+            <span>Our Team Member</span>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <p class="review-text">
+              My portfolio looks amazing now. Great communication and affordable pricing.
+            </p>
+            <img src="images/anoymous.png" alt="">
+            <h4>Nusrat Jahan</h4>
+            <span>Freelancer</span>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <p class="review-text">
+              Highly recommended for startups. Clean UI and fast delivery.
+            </p>
+            <img src="images/anoymous.png" alt="">
+            <h4>Imran Hossain</h4>
+            <span>Startup Founder</span>
+          </div>
+        </div>
+
+        <div class="review-dots"></div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -454,7 +696,8 @@
       <form class="brief-form" id="briefForm" style="display: none;"
         onsubmit="event.preventDefault(); confirmAndSendBrief();">
         <div class="form-group">
-          <label>Select Your plan or <a href="#pricing">learn more about plans</a></label>
+          <label>Select Your plan or <a href="#pricing">learn more about plan (price depends on this
+              selection)</a></label>
           <small style="color:#666;">you selected the plan. You can change it</small>
           <select id="SiteType" required>
             <option value="">Select Your plan</option>
@@ -548,6 +791,7 @@
       <!-- Success Message -->
       <div id="successMessageBrief"
         style="display: none; text-align: center; padding: 20px; background: #d4edda; border-radius: 5px; margin-top: 20px;">
+        <h3 style="color: #155724;">✓ Your order is confirmed!</h3>
         <h3 style="color: #155724;">✓ Project Brief Sent Successfully!</h3>
         <p>WhatsApp has been opened in a new tab with your project details.</p>
         <p>We'll contact you soon. <a href="#" onclick="showFormAgain()">Send another project brief</a></p>
@@ -557,112 +801,124 @@
   <!-- user web detail -->
 
 
+  <!-- footer -->
+   <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>AAI Web Studio</h3>
+      <p>
+        We build fast, modern, and affordable websites for businesses and creators.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a>Business Websites</a>
+      <a>Landing Pages</a>
+      <a>Portfolio Sites</a>
+      <a>SEO Optimization</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 Chattogram, Bangladesh</p>
+      <p>📧 abrarilhamprogrammer@gmail.com</p>
+      <p>📞 +880 1330 910019</p>
+
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AAI Web Studio. All rights reserved.
+  </div>
+</footer>
+
+
 
 
   <script>
     let selectedPlan = "";
 
-function selectPlan(plan) {
-  // Extract plan name safely
-  const cleanPlan = plan.split("–")[0].trim();
-  selectedPlan = cleanPlan;
+    function selectPlan(plan) {
+      // 1️⃣ Clean plan name
+      const cleanPlan = plan.split("–")[0].trim();
+      selectedPlan = cleanPlan;
 
-  const planSelect = document.getElementById("SiteType");
-  if (planSelect) {
-    planSelect.value = cleanPlan;
-  }
+      // 2️⃣ Set plan dropdown value + lock it
+      const planSelect = document.getElementById("SiteType");
+      if (planSelect) {
+        planSelect.value = cleanPlan;
+        planSelect.disabled = true;
+      }
 
-  // Scroll to project brief
-  const briefSection = document.getElementById("project-brief");
-  if (briefSection) {
-    briefSection.scrollIntoView({ behavior: "smooth" });
-  }
+      // 3️⃣ Show step bar (with animation)
+      showStepBar();
 
-  // Show form, hide start box
-  const startBox = document.getElementById("briefStart");
-  const form = document.getElementById("briefForm");
+      // 4️⃣ Move to Step 2 (Details)
+      setStep(2);
 
-  if (startBox) startBox.style.display = "none";
-  if (form) form.style.display = "block";
-  if (planSelect) {
-  planSelect.value = cleanPlan;
-  planSelect.disabled = true;
-}
-selectedPlan = plan;
+      // 5️⃣ Show form & hide start message
+      const startBox = document.getElementById("briefStart");
+      const form = document.getElementById("briefForm");
 
-  // SHOW STEP BAR
-  document.getElementById("stepBar").style.display = "block";
+      if (startBox) startBox.style.display = "none";
+      if (form) form.style.display = "block";
 
-  // STEP 2 ACTIVE
-  setStep(2);
+      // 6️⃣ Scroll to project brief
+      document.getElementById("project-brief").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
 
-  document.getElementById("project-brief").scrollIntoView({
-    behavior: "smooth"
-  });
+    function saveStep(step) {
+      localStorage.setItem("currentStep", step);
+    }
 
-  document.getElementById("briefForm").style.display = "block";
-  document.getElementById("startBrief").style.display = "none";
-}
-// if (planSelect) {
-//   planSelect.value = cleanPlan;
-//   planSelect.disabled = true;
-// }
+    function getSavedStep() {
+      return parseInt(localStorage.getItem("currentStep")) || 0;
+    }
 
-
-    // let selectedPlan = "";
-
-    // function selectPlan(plan) {
-    //   selectedPlan = plan;
-
-    //   document.getElementById("project-brief").scrollIntoView({
-    //     behavior: "smooth"
-    //   });
-
-    //   const form = document.querySelector(".brief-form");
-    //   const startBtn = document.getElementById("startBrief");
-
-    //   if (form) form.style.display = "block";
-    //   if (startBtn) startBtn.style.display = "none";
-    // }
-
-    //   function sendBriefToWhatsApp() {
-    //     const websiteType = document.getElementById("websiteType").value;
-    //     const pages = document.getElementById("pages").value;
-    //     const content = document.getElementById("content").value;
-    //     const notes = document.getElementById("notes").value;
-
-    //     let features = [];
-    //     document
-    //       .querySelectorAll(".checkbox-group input:checked")
-    //       .forEach(cb => {
-    //         features.push(cb.parentElement.textContent.trim());
-    //       });
-
-    //     if (!websiteType || !pages) {
-    //       alert("Please select website type and number of pages.");
-    //       return;
-    //     }
-
-    //     const message =
-    // `Hello,
-
-    // I am interested in your website service.
-
-    // Selected Plan: ${selectedPlan || "Not selected"}
-    // Website Type: ${websiteType}
-    // Pages: ${pages}
-    // Content Ready: ${content}
-    // Features: ${features.join(", ") || "None"}
-    // Notes: ${notes || "N/A"}
-
-    // Please let me know the next steps.
-    // Thank you.`;
-
-    //     const phone = "8801XXXXXXXXX"; // replace with your real number
-    //     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    //     window.open(url, "_blank");
-    //   }
+    function clearStepProgress() {
+      localStorage.removeItem("currentStep");
+    }
   </script>
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      toggleBtn.textContent = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleBtn.textContent = "🌙";
+    }
+  });
+</script>
 
 
   <script src="script.js"></script>
