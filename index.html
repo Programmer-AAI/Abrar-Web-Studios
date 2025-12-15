@@ -10,11 +10,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
-<a href="https://wa.me/8801330910019?text=Hi%20I%20need%20a%20website" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
 
 <body>
+  <a href="https://wa.me/8801330910019?text=Hi%20I%20need%20a%20website" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <header class="header">
     <nav class="navbar">
       <img src="images/logo.png" class="logo" alt="Logo">
@@ -307,9 +307,10 @@
           <li>✔ 7 Days Support</li>
         </ul>
 
-        <button class="btn btn-primary" data-plan="One Page Website" data-price="৳4,000" onclick="openWhatsApp(this)">
+        <button class="btn btn-primary" <button onclick="selectPlan('One Page – ৳3,000+')">
           Choose Plan
         </button>
+
       </div>
 
       <!-- Basic -->
@@ -326,9 +327,10 @@
           <li>✔ 7 Days Support</li>
         </ul>
 
-        <button class="btn btn-primary" data-plan="Basic Website" data-price="৳8,000+" onclick="openWhatsApp(this)">
+        <button class="btn btn-primary" onclick="selectPlan('Basic – ৳5,000+')">
           Choose Plan
         </button>
+
       </div>
 
       <!-- Starter -->
@@ -345,7 +347,10 @@
           <li>✔ 7 Days Support</li>
         </ul>
 
-        <button class="btn btn-primary" data-plan="Starter Website" data-price="৳8,000+" onclick="openWhatsApp(this)">
+        <!-- <button class="btn btn-primary" data-plan="Starter Website" data-price="৳8,000+" onclick="openWhatsApp(this)">
+          Choose Plan
+        </button> -->
+        <button class="btn btn-primary" onclick="selectPlan('Starter – ৳8,000+')">
           Choose Plan
         </button>
       </div>
@@ -367,7 +372,10 @@
           <li>✔ 30 Days Support</li>
         </ul>
 
-        <button class="btn btn-primary" data-plan="Business Website" data-price="৳15,000+" onclick="openWhatsApp(this)">
+        <!-- <button class="btn btn-primary" data-plan="Business Website" data-price="৳15,000+" onclick="openWhatsApp(this)">
+          Choose Plan
+        </button> -->
+        <button class="btn btn-primary" onclick="selectPlan('Business – ৳15,000+')">
           Choose Plan
         </button>
       </div>
@@ -388,7 +396,7 @@
           <li>✔ 3 Months Support</li>
         </ul>
 
-        <button class="btn btn-primary" data-plan="Premium Website" data-price="৳40,000+" onclick="openWhatsApp(this)">
+        <button class="btn btn-primary" onclick="selectPlan('Premium – ৳40,000+')">
           Choose Plan
         </button>
       </div>
@@ -398,128 +406,266 @@
 
 
 
+<!-- step progress section -->
+<div class="step-progress-wrapper" id="stepBar">
+  <div class="step-progress">
+    <div class="step active">
+      <span>1</span>
+      <p>Plan</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step">
+      <span>2</span>
+      <p>Details</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step">
+      <span>3</span>
+      <p>Confirm</p>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
 
   <!-- User website details-->
   <section class="project-brief" id="project-brief">
-  <div class="container">
-    <h2>Tell Us About Your Project</h2>
-    <p class="section-desc">
-      Answer a few quick questions so we can understand what kind of website you need.
-    </p>
+    <div class="container">
+      <h2>Tell Us About Your Project</h2>
+      <p class="section-desc">
+        Answer a few quick questions so we can understand what kind of website you need.
+      </p>
 
-    <div class="brief-start" id="briefStart">
-      <p>Answer a few questions so we can understand your project better.</p>
-      <button class="btn btn-primary" id="startBrief">
-        Start Project Brief
-      </button>
-    </div>
-
-    <form class="brief-form" id="briefForm" style="display: none;">
-      <div class="form-group">
-        <label>Select Your plan or <a href="#pricing">learn more about plans</a></label>
-        <select id="SiteType" required>
-          <option value="">Select Your plan</option>
-          <option>One Page</option>
-          <option>Basic</option>
-          <option>Starter</option>
-          <option>Business</option>
-          <option>Premium</option>
-          <a href="#pricing">learn more</a>
-        </select>
+      <div class="brief-start" id="briefStart">
+        <p>Answer a few questions so we can understand your project better.</p>
+        <button class="btn btn-primary" id="startBrief">
+          Start Project Brief
+        </button>
       </div>
 
+      <form class="brief-form" id="briefForm" style="display: none;"
+        onsubmit="event.preventDefault(); confirmAndSendBrief();">
+        <div class="form-group">
+          <label>Select Your plan or <a href="#pricing">learn more about plans</a></label>
+          <small style="color:#666;">you selected the plan. You can change it</small>
+          <select id="SiteType" required>
+            <option value="">Select Your plan</option>
+            <option value="One Page">One Page</option>
+            <option value="Basic">Basic</option>
+            <option value="Starter">Starter</option>
+            <option value="Business">Business</option>
+            <option value="Premium">Premium</option>
+          </select>
+
+        </div>
 
 
-      <div class="form-group">
-        <label>What type of website do you need?</label>
-        <select id="websiteType" required>
-          <option value="">Select an option</option>
-          <option>Business Website</option>
-          <option>Personal Website</option>
-          <option>Portfolio Website</option>
-          <option>E-commerce Website</option>
-          <option>Blog</option>
-          <option>Course selling</option>
-          <option>Other</option>
-        </select>
-      </div>
 
-      <div class="form-group">
-        <label>Number of pages needed</label>
-        <select id="pages" required>
-          <option value="">Select</option>
-          <option>1 Page</option>
-          <option>2–3 Pages</option>
-          <option>4–7 Pages</option>
-          <option>8+ Pages</option>
-          <option>Not sure</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label>What type of website do you need?</label>
+          <select id="websiteType" required>
+            <option value="">Select an option</option>
+            <option>Business Website</option>
+            <option>Personal Website</option>
+            <option>Portfolio Website</option>
+            <option>E-commerce Website</option>
+            <option>Blog</option>
+            <option>Course selling</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label>Do you already have content? (optional)</label>
-        <select id="content">
-          <option>Yes, everything is ready</option>
-          <option>Partially ready</option>
-          <option>No, I need help</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label>Number of pages needed</label>
+          <select id="pages" required>
+            <option value="">Select</option>
+            <option>1 Page</option>
+            <option>2–3 Pages</option>
+            <option>4–7 Pages</option>
+            <option>8+ Pages</option>
+            <option>Not sure</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label>Do you need these features?</label>
-        <div class="checkbox-group">
-          <label><input type="checkbox" name="feature" value="Contact Form"> Contact Form</label>
-          <label><input type="checkbox" name="feature" value="WhatsApp Chat"> WhatsApp Chat</label>
-          <label><input type="checkbox" name="feature" value="Admin Dashboard"> Admin Dashboard</label>
-          <label><input type="checkbox" name="feature" value="SEO Optimization"> SEO Optimization</label>
-          <label><input type="checkbox" name="feature" value="Animations"> Animations</label>
+        <div class="form-group">
+          <label>Do you already have content? (optional)</label>
+          <select id="content">
+            <option>Yes, everything is ready</option>
+            <option>Partially ready</option>
+            <option>No, I need help</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Do you need these features?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="feature" value="Contact Form"> Contact Form</label>
+            <label><input type="checkbox" name="feature" value="WhatsApp Chat"> WhatsApp Chat</label>
+            <label><input type="checkbox" name="feature" value="Admin Dashboard"> Admin Dashboard</label>
+            <label><input type="checkbox" name="feature" value="SEO Optimization"> SEO Optimization</label>
+            <label><input type="checkbox" name="feature" value="Animations"> Animations</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Any special requirements?</label>
+          <textarea id="notes" placeholder="Example: reference websites, colors, deadline, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <!-- onclick="confirmAndSendBrief()" -->
+          Send Project Details
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()" style="margin-left: 10px;">
+          Start Over
+        </button>
+      </form>
+
+      <!-- Confirmation Modal -->
+      <div id="confirmationModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%;">
+          <h3>Confirm Your Details</h3>
+          <div id="previewContent"
+            style="margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 5px; max-height: 300px; overflow-y: auto;">
+          </div>
+          <p style="margin-bottom: 20px;">This will open WhatsApp in a new tab with your project details. Do you want to
+            proceed?</p>
+          <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button type="button" class="btn btn-secondary" onclick="closeConfirmation()">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()">Yes, Send to WhatsApp</button>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <label>Any special requirements?</label>
-        <textarea id="notes" placeholder="Example: reference websites, colors, deadline, etc."></textarea>
-      </div>
-      <button type="button" class="btn btn-primary" onclick="confirmAndSendBrief()">
-        Send Project Details
-      </button>
-      <button type="button" class="btn btn-secondary" onclick="resetForm()" style="margin-left: 10px;">
-        Start Over
-      </button>
-    </form>
-
-    <!-- Confirmation Modal -->
-    <div id="confirmationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-      <div style="background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%;">
-        <h3>Confirm Your Details</h3>
-        <div id="previewContent" style="margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 5px; max-height: 300px; overflow-y: auto;"></div>
-        <p style="margin-bottom: 20px;">This will open WhatsApp in a new tab with your project details. Do you want to proceed?</p>
-        <div style="display: flex; gap: 10px; justify-content: flex-end;">
-          <button type="button" class="btn btn-secondary" onclick="closeConfirmation()">Cancel</button>
-          <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()">Yes, Send to WhatsApp</button>
-        </div>
+      <!-- Success Message -->
+      <div id="successMessageBrief"
+        style="display: none; text-align: center; padding: 20px; background: #d4edda; border-radius: 5px; margin-top: 20px;">
+        <h3 style="color: #155724;">✓ Project Brief Sent Successfully!</h3>
+        <p>WhatsApp has been opened in a new tab with your project details.</p>
+        <p>We'll contact you soon. <a href="#" onclick="showFormAgain()">Send another project brief</a></p>
       </div>
     </div>
-
-    <!-- Success Message -->
-    <div id="successMessageBrief" style="display: none; text-align: center; padding: 20px; background: #d4edda; border-radius: 5px; margin-top: 20px;">
-      <h3 style="color: #155724;">✓ Project Brief Sent Successfully!</h3>
-      <p>WhatsApp has been opened in a new tab with your project details.</p>
-      <p>We'll contact you soon. <a href="#" onclick="showFormAgain()">Send another project brief</a></p>
-    </div>
-  </div>
-</section>
-<!-- user web detail -->
+  </section>
+  <!-- user web detail -->
 
 
 
 
+  <script>
+    let selectedPlan = "";
+
+function selectPlan(plan) {
+  // Extract plan name safely
+  const cleanPlan = plan.split("–")[0].trim();
+  selectedPlan = cleanPlan;
+
+  const planSelect = document.getElementById("SiteType");
+  if (planSelect) {
+    planSelect.value = cleanPlan;
+  }
+
+  // Scroll to project brief
+  const briefSection = document.getElementById("project-brief");
+  if (briefSection) {
+    briefSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Show form, hide start box
+  const startBox = document.getElementById("briefStart");
+  const form = document.getElementById("briefForm");
+
+  if (startBox) startBox.style.display = "none";
+  if (form) form.style.display = "block";
+  if (planSelect) {
+  planSelect.value = cleanPlan;
+  planSelect.disabled = true;
+}
+selectedPlan = plan;
+
+  // SHOW STEP BAR
+  document.getElementById("stepBar").style.display = "block";
+
+  // STEP 2 ACTIVE
+  setStep(2);
+
+  document.getElementById("project-brief").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  document.getElementById("briefForm").style.display = "block";
+  document.getElementById("startBrief").style.display = "none";
+}
+// if (planSelect) {
+//   planSelect.value = cleanPlan;
+//   planSelect.disabled = true;
+// }
 
 
-<script src="script.js"></script>
+    // let selectedPlan = "";
+
+    // function selectPlan(plan) {
+    //   selectedPlan = plan;
+
+    //   document.getElementById("project-brief").scrollIntoView({
+    //     behavior: "smooth"
+    //   });
+
+    //   const form = document.querySelector(".brief-form");
+    //   const startBtn = document.getElementById("startBrief");
+
+    //   if (form) form.style.display = "block";
+    //   if (startBtn) startBtn.style.display = "none";
+    // }
+
+    //   function sendBriefToWhatsApp() {
+    //     const websiteType = document.getElementById("websiteType").value;
+    //     const pages = document.getElementById("pages").value;
+    //     const content = document.getElementById("content").value;
+    //     const notes = document.getElementById("notes").value;
+
+    //     let features = [];
+    //     document
+    //       .querySelectorAll(".checkbox-group input:checked")
+    //       .forEach(cb => {
+    //         features.push(cb.parentElement.textContent.trim());
+    //       });
+
+    //     if (!websiteType || !pages) {
+    //       alert("Please select website type and number of pages.");
+    //       return;
+    //     }
+
+    //     const message =
+    // `Hello,
+
+    // I am interested in your website service.
+
+    // Selected Plan: ${selectedPlan || "Not selected"}
+    // Website Type: ${websiteType}
+    // Pages: ${pages}
+    // Content Ready: ${content}
+    // Features: ${features.join(", ") || "None"}
+    // Notes: ${notes || "N/A"}
+
+    // Please let me know the next steps.
+    // Thank you.`;
+
+    //     const phone = "8801XXXXXXXXX"; // replace with your real number
+    //     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    //     window.open(url, "_blank");
+    //   }
+  </script>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
