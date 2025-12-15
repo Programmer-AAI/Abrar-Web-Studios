@@ -287,6 +287,7 @@ Thank you.`;
 
 // Project Brief Functions
 function confirmAndSendBrief() {
+    const siteType = document.getElementById("SiteType").value;
     const websiteType = document.getElementById("websiteType").value;
     const pages = document.getElementById("pages").value;
     const content = document.getElementById("content").value;
@@ -304,6 +305,8 @@ function confirmAndSendBrief() {
 
     // Store the data in variables for later use
     window.briefData = {
+        siteType,
+
         websiteType,
         pages,
         content,
@@ -315,6 +318,8 @@ function confirmAndSendBrief() {
     const previewContent = document.getElementById("previewContent");
     if (previewContent) {
         previewContent.innerHTML = `
+            <p><strong>Website Type:</strong> ${siteType}</p>
+
             <p><strong>Website Type:</strong> ${websiteType}</p>
             <p><strong>Pages:</strong> ${pages}</p>
             <p><strong>Content Ready:</strong> ${content}</p>

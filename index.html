@@ -419,14 +419,30 @@
 
     <form class="brief-form" id="briefForm" style="display: none;">
       <div class="form-group">
+        <label>Select Your plan or <a href="#pricing">learn more about plans</a></label>
+        <select id="SiteType" required>
+          <option value="">Select Your plan</option>
+          <option>One Page</option>
+          <option>Basic</option>
+          <option>Starter</option>
+          <option>Business</option>
+          <option>Premium</option>
+          <a href="#pricing">learn more</a>
+        </select>
+      </div>
+
+
+
+      <div class="form-group">
         <label>What type of website do you need?</label>
         <select id="websiteType" required>
           <option value="">Select an option</option>
           <option>Business Website</option>
-          <option>One Page / Landing Page</option>
+          <option>Personal Website</option>
           <option>Portfolio Website</option>
           <option>E-commerce Website</option>
-          <option>Blog / Personal Website</option>
+          <option>Blog</option>
+          <option>Course selling</option>
           <option>Other</option>
         </select>
       </div>
