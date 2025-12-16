@@ -9,6 +9,10 @@ if (menuToggle) {
         navButtons.classList.toggle("active");
     });
 }
+window.addEventListener("scroll", () => {
+  document.querySelector(".navbar")
+    .classList.toggle("scrolled", window.scrollY > 10);
+});
 
 // Carousel Functionality
 document.addEventListener("DOMContentLoaded", () => {
@@ -291,28 +295,6 @@ function showFormAgain() {
     }
 }
 
-
-// function setStep(stepNumber) {
-//   const steps = document.querySelectorAll(".step");
-//   const lines = document.querySelectorAll(".line");
-
-//   steps.forEach((step, index) => {
-//     step.classList.remove("active", "completed");
-
-//     if (index + 1 < stepNumber) {
-//       step.classList.add("completed");
-//     } else if (index + 1 === stepNumber) {
-//       step.classList.add("active");
-//     }
-//   });
-
-//   lines.forEach((line, index) => {
-//     line.classList.remove("completed");
-//     if (index + 1 < stepNumber) {
-//       line.classList.add("completed");
-//     }
-//   });
-// }
 function setStep(stepNumber) {
   const steps = document.querySelectorAll(".step");
   const lines = document.querySelectorAll(".line");
@@ -649,4 +631,3 @@ setInterval(() => {
   showReview((reviewIndex + 1) % reviews.length);
 }, 5000);
 
-showReview(0);

@@ -4,20 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <meta name="description"
+    content="Professional web development services in Bangladesh. Fast, modern and responsive websites.">
+  <meta property="og:title" content="Abrar Web Studios">
+  <meta property="og:image" content="/preview.png">
+
+  <title>AWS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/4x-icon" href="images/logo2.png">
 </head>
 
 <body>
   <a href="https://wa.me/8801330910019?text=Hi%20I%20need%20a%20website" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <button class="theme-toggle whatsapp-float" id="themeToggle" aria-label="Toggle Dark Mode" >
-  🌙
-</button>
+  <button class="theme-toggle whatsapp-float" id="themeToggle" aria-label="Toggle Dark Mode">
+    🌙
+  </button>
   <header class="header">
     <nav class="navbar">
       <img src="images/logo.png" class="logo" alt="Logo">
@@ -27,43 +34,61 @@
       </div>
 
       <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
+        <a href="#t-c">Home</a>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#pricing">pricing</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">contact</a>
         <a href="#reviews">Reviews</a>
-        <a href="#blogs">Blogs</a>
       </div>
 
       <div class="nav-buttons" id="navButtons">
-        <a href="#projects" class="btn btn-primary">Projects</a>
-        <a href="#contact" class="btn btn-secondary">Contact</a>
+        <a href="#pricing" class="btn btn-primary a">Get Started</a>
+        <a href="#project" class="btn btn-secondary a">projects</a>
       </div>
-
     </nav>
+    <nav class="sub-navbar">
+  <ul class="sub-nav-links">
+    <li><a href="policies.html">policies</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#pricing">Plans</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 
 
-    <section class="top-container">
+    <section class="top-container" id="t-c">
       <header class="showcase">
-        <h1>Turn Your Business Into a Strong Online Brand</h1>
-        <p>We create modern, fast and affordable websites that helps Businesses grow online and attract
-          customer.</p>
+        <h1>Build a Professional Website That Grows Your Business</h1>
+        <p>
+          We build fast, modern, and conversion-focused websites that help businesses
+          build trust, attract customers, and grow online.
+        </p>
+
         <div class="hero-btn">
-          <a href="" class="btn btn-primary">Get Started</a>
-          <a href="" class="btn btn-secondary">View Work</a>
+          <a href="#project-brief" class="btn btn-primary">view plans</a>
+          <a href="#project-brief" class="btn btn-secondary">Start Your project</a>
         </div>
       </header>
       <div class="top-box top-box-a">
-        <h4>starter website</h4>
-        <p class="price">৳8,000 – ৳40,000+</p>
-        <p class="sub-line">Perfect for personal sites & small businesses</p>
-        <a href="" class="btn btn-primary">Get Started</a>
+        <h4>Starter Website</h4>
+        <p class="price">৳8,000+</p>
+        <p class="sub-line">
+          Ideal for personal brands and small businesses starting online
+        </p>
+
+        <a href="#pricing" class="btn btn-primary">Get Started</a>
       </div>
       <div class="top-box top-box-b">
         <h4>Business Website</h4>
         <p class="price">৳15,000 – ৳99,999+</p>
-        <p class="sub-line">Best for growing businesses & brands</p>
-        <a href="" class="btn btn-primary">Choose plan</a>
+        <p class="sub-line">
+          Designed for growing businesses that need credibility and performance
+        </p>
+
+        <a href="#pricing" class="btn btn-primary">Choose plan</a>
       </div>
     </section>
   </header>
@@ -89,6 +114,26 @@
       <!-- Carousel Track -->
       <div class="services-carousel-track">
         <!-- Slide 1 -->
+        <!-- slide 2.5 -->
+        <div class="service-slide">
+          <div class="box">
+            <i class="fa-solid fa-rocket fa-4x"></i>
+            <h3>specialities</h3>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> You Can add Anything to your website</li>
+              <li><i class="fa-solid fa-check"></i> One section is free for all plans</li>
+              <li><i class="fa-solid fa-check"></i> Fast loading speeds</li>
+              <li><i class="fa-solid fa-check"></i> Mobile SEO ready</li>
+              <li><i class="fa-solid fa-check"></i> <b>Charge will be added for Special additional feature</b></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+
         <div class="service-slide">
           <div class="box">
             <i class="fa-solid fa-code fa-4x"></i>
@@ -117,6 +162,8 @@
             </ul>
           </div>
         </div>
+
+
 
         <!-- Slide 3 -->
         <div class="service-slide">
@@ -154,14 +201,15 @@
         <div class="service-slide">
           <div class="box">
             <i class="fa fa-user fa-4x"></i>
-            <h3>International Client</h3>
+            <h3>International Clients</h3>
             <ul class="service-features">
-              <li><i class="fa-solid fa-check"></i> intenational cutomer Service</li>
-              <li><i class="fa-solid fa-check"></i> card payment</li>
-              <li><i class="fa-solid fa-check"></i> Language: English</li>
-              <li><i class="fa-solid fa-check"></i> Contact via WhatsApp</li>
-              <li><i class="fa-solid fa-check"></i> Direct Messege Facility</li>
+              <li>✔ International client support</li>
+              <li>✔ Card & online payment support</li>
+              <li>✔ English communication</li>
+              <li>✔ WhatsApp & direct messaging</li>
+              <li>✔ Time-zone friendly workflow</li>
             </ul>
+
           </div>
         </div>
 
@@ -187,6 +235,7 @@
             <h3>Fast Delivery</h3>
             <ul class="service-features">
               <li><i class="fa-solid fa-check"></i> 72-hour websites</li>
+              <li><i class="fa-solid fa-check"></i> 50% charge included</li>
               <li><i class="fa-solid fa-check"></i> Quick turnaround</li>
               <li><i class="fa-solid fa-check"></i> Rapid revisions</li>
               <li><i class="fa-solid fa-check"></i> Express launch</li>
@@ -201,26 +250,10 @@
             <i class="fa-solid fa-shield-alt fa-4x"></i>
             <h3>Security & Maintenance</h3>
             <ul class="service-features">
-              <li><i class="fa-solid fa-check"></i> SSL certificate setup</li>
               <li><i class="fa-solid fa-check"></i> Regular backups</li>
               <li><i class="fa-solid fa-check"></i> Security monitoring</li>
               <li><i class="fa-solid fa-check"></i> Performance optimization</li>
               <li><i class="fa-solid fa-check"></i> Monthly care plans</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Slide 8 -->
-        <div class="service-slide">
-          <div class="box">
-            <i class="fa-solid fa-chart-line fa-4x"></i>
-            <h3>Analytics & Insights</h3>
-            <ul class="service-features">
-              <li><i class="fa-solid fa-check"></i> Google Analytics setup</li>
-              <li><i class="fa-solid fa-check"></i> Visitor tracking</li>
-              <li><i class="fa-solid fa-check"></i> Conversion tracking</li>
-              <li><i class="fa-solid fa-check"></i> Monthly reports</li>
-              <li><i class="fa-solid fa-check"></i> Performance insights</li>
             </ul>
           </div>
         </div>
@@ -241,23 +274,6 @@
           </div>
         </div>
 
-        <!-- Slide 10 -->
-        <div class="service-slide">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-link"></i>
-            </div>
-            <h3>Link-in-Bio Website</h3>
-            <ul class="features">
-              <li><i class="fas fa-check"></i> Mobile-optimized single page</li>
-              <li><i class="fas fa-check"></i> Social media icons</li>
-              <li><i class="fas fa-check"></i> Custom domain included</li>
-              <li><i class="fas fa-check"></i> Analytics dashboard</li>
-              <li class="price"><i class="fas fa-tag"></i> ৳4,500</li>
-            </ul>
-          </div>
-        </div>
-
         <!-- Slide 11 -->
         <div class="service-slide">
           <div class="service-card">
@@ -270,7 +286,6 @@
               <li><i class="fas fa-check"></i> Code minification</li>
               <li><i class="fas fa-check"></i> Caching setup</li>
               <li><i class="fas fa-check"></i> Google PageSpeed 90+ score</li>
-              <li class="price"><i class="fas fa-tag"></i> ৳3,500 one-time</li>
             </ul>
           </div>
         </div>
@@ -302,13 +317,163 @@
 
 
 
+
+  <section class="pricing" id="pricing">
+    <div class="pricing-header">
+      <h2>Choose Your <span class="highlight">Plan</span></h2>
+      <p>
+        Transparent pricing. No hidden costs. Clear communication from start to finish.
+      </p>
+    </div>
+
+    <div class="pricing-cards">
+      <!-- One page site -->
+      <div class="pricing-card">
+        <h3>One Page</h3>
+        <p class="price">৳3,000</p>
+        <p class="plan-desc">Perfect for landing pages & simple businesses</p>
+
+        <ul>
+          <li>✔ 1 Page Website</li>
+          <li>✔ Responsive Design</li>
+          <li>✔ Basic SEO</li>
+          <li>✔ Contact Form</li>
+          <li>✔ 7 Days Support</li>
+        </ul>
+
+        <button class="btn btn-primary" <button onclick="selectPlan('One Page – ৳3,000+')">
+          Choose Plan
+        </button>
+
+      </div>
+
+      <!-- Basic -->
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">৳5,000+</p>
+        <p class="plan-desc">Perfect for informational websites</p>
+
+        <ul>
+          <li>✔ 1–2 Pages Website</li>
+          <li>✔ Responsive Design</li>
+          <li>✔ Basic SEO</li>
+          <li>✔ Contact Form</li>
+          <li>✔ 7 Days Support</li>
+        </ul>
+
+        <button class="btn btn-primary" onclick="selectPlan('Basic – ৳5,000+')">
+          Choose Plan
+        </button>
+
+      </div>
+
+      <!-- Starter -->
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p class="price">৳8,000+</p>
+        <p class="plan-desc">Perfect for individuals & small startups</p>
+
+        <ul>
+          <li>✔ 1–5 Pages Website</li>
+          <li>✔ Responsive Design</li>
+          <li>✔ Basic SEO</li>
+          <li>✔ Contact Form</li>
+          <li>✔ 7 Days Support</li>
+        </ul>
+
+        <!-- <button class="btn btn-primary" data-plan="Starter Website" data-price="৳8,000+" onclick="openWhatsApp(this)">
+          Choose Plan
+        </button> -->
+        <button class="btn btn-primary" onclick="selectPlan('Starter – ৳8,000+')">
+          Choose Plan
+        </button>
+      </div>
+
+
+      <!-- Popular -->
+      <div class="pricing-card popular">
+        <span class="badge">Most Popular</span>
+        <h3>Business</h3>
+        <p class="price">৳15,000+</p>
+        <p class="plan-desc">Best for businesses that want a strong online presence and better conversions</p>
+
+        <ul>
+          <li>✔ Up to 7 Pages</li>
+          <li>✔ Custom UI Design</li>
+          <li>✔ Advanced SEO</li>
+          <li>✔ Performance Optimization</li>
+          <li>✔ WhatsApp Integration</li>
+          <li>✔ 30 Days Support</li>
+        </ul>
+
+        <!-- <button class="btn btn-primary" data-plan="Business Website" data-price="৳15,000+" onclick="openWhatsApp(this)">
+          Choose Plan
+        </button> -->
+        <button class="btn btn-primary" onclick="selectPlan('Business – ৳15,000+')">
+          Choose Plan
+        </button>
+      </div>
+
+
+      <!-- Premium -->
+      <div class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">৳40,000+</p>
+        <p class="plan-desc">For serious businesses & scaling brands</p>
+
+        <ul>
+          <li>✔ Unlimited Pages</li>
+          <li>✔ Custom Animations</li>
+          <li>✔ Full SEO Setup</li>
+          <li>✔ Admin Dashboard</li>
+          <li>✔ Security Optimization</li>
+          <li>✔ 3 Months Support</li>
+        </ul>
+
+        <button class="btn btn-primary" onclick="selectPlan('Premium – ৳40,000+')">
+          Choose Plan
+        </button>
+      </div>
+    </div>
+    <a href="#process" class="random">View our work process</a>
+  </section>
+
+
+
+
+  <!-- step progress section -->
+  <div class="step-progress-wrapper" id="stepBar">
+    <div class="step-progress">
+      <div class="step active">
+        <span>1</span>
+        <p>Plan</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <span>2</span>
+        <p>Details</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <span>3</span>
+        <p>Confirm</p>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Project section -->
   <section class="projects" id="projects">
     <div class="projects-header">
       <h2>Our Projects</h2>
       <p>
-        Real websites built for real businesses.
-        Clean design, fast performance, and strong branding.
+        Real-world websites built to convert visitors into customers.
+        Focused on performance, design, and business growth.
+
       </p>
     </div>
 
@@ -388,161 +553,12 @@
     </div>
   </section>
 
-
-
-  <section class="pricing" id="pricing">
-    <div class="pricing-header">
-      <h2>Choose Your <span class="highlight">Plan</span></h2>
-      <p>Transparent pricing. No hidden costs. Built for your growth.</p>
-    </div>
-
-    <div class="pricing-cards">
-      <!-- One page site -->
-      <div class="pricing-card">
-        <h3>One Page</h3>
-        <p class="price">৳3,000</p>
-        <p class="plan-desc">Perfect for landing pages & simple businesses</p>
-
-        <ul>
-          <li>✔ 1 Page Website</li>
-          <li>✔ Responsive Design</li>
-          <li>✔ Basic SEO</li>
-          <li>✔ Contact Form</li>
-          <li>✔ 7 Days Support</li>
-        </ul>
-
-        <button class="btn btn-primary" <button onclick="selectPlan('One Page – ৳3,000+')">
-          Choose Plan
-        </button>
-
-      </div>
-
-      <!-- Basic -->
-      <div class="pricing-card">
-        <h3>Basic</h3>
-        <p class="price">৳5,000+</p>
-        <p class="plan-desc">Perfect for informational websites</p>
-
-        <ul>
-          <li>✔ 1–2 Pages Website</li>
-          <li>✔ Responsive Design</li>
-          <li>✔ Basic SEO</li>
-          <li>✔ Contact Form</li>
-          <li>✔ 7 Days Support</li>
-        </ul>
-
-        <button class="btn btn-primary" onclick="selectPlan('Basic – ৳5,000+')">
-          Choose Plan
-        </button>
-
-      </div>
-
-      <!-- Starter -->
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <p class="price">৳8,000+</p>
-        <p class="plan-desc">Perfect for individuals & small startups</p>
-
-        <ul>
-          <li>✔ 1–5 Pages Website</li>
-          <li>✔ Responsive Design</li>
-          <li>✔ Basic SEO</li>
-          <li>✔ Contact Form</li>
-          <li>✔ 7 Days Support</li>
-        </ul>
-
-        <!-- <button class="btn btn-primary" data-plan="Starter Website" data-price="৳8,000+" onclick="openWhatsApp(this)">
-          Choose Plan
-        </button> -->
-        <button class="btn btn-primary" onclick="selectPlan('Starter – ৳8,000+')">
-          Choose Plan
-        </button>
-      </div>
-
-
-      <!-- Popular -->
-      <div class="pricing-card popular">
-        <span class="badge">Most Popular</span>
-        <h3>Business</h3>
-        <p class="price">৳15,000+</p>
-        <p class="plan-desc">Best for growing businesses & brands</p>
-
-        <ul>
-          <li>✔ Up to 7 Pages</li>
-          <li>✔ Custom UI Design</li>
-          <li>✔ Advanced SEO</li>
-          <li>✔ Performance Optimization</li>
-          <li>✔ WhatsApp Integration</li>
-          <li>✔ 30 Days Support</li>
-        </ul>
-
-        <!-- <button class="btn btn-primary" data-plan="Business Website" data-price="৳15,000+" onclick="openWhatsApp(this)">
-          Choose Plan
-        </button> -->
-        <button class="btn btn-primary" onclick="selectPlan('Business – ৳15,000+')">
-          Choose Plan
-        </button>
-      </div>
-
-
-      <!-- Premium -->
-      <div class="pricing-card">
-        <h3>Premium</h3>
-        <p class="price">৳40,000+</p>
-        <p class="plan-desc">For serious businesses & scaling brands</p>
-
-        <ul>
-          <li>✔ Unlimited Pages</li>
-          <li>✔ Custom Animations</li>
-          <li>✔ Full SEO Setup</li>
-          <li>✔ Admin Dashboard</li>
-          <li>✔ Security Optimization</li>
-          <li>✔ 3 Months Support</li>
-        </ul>
-
-        <button class="btn btn-primary" onclick="selectPlan('Premium – ৳40,000+')">
-          Choose Plan
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- step progress section -->
-  <div class="step-progress-wrapper" id="stepBar">
-    <div class="step-progress">
-      <div class="step active">
-        <span>1</span>
-        <p>Plan</p>
-      </div>
-
-      <div class="line"></div>
-
-      <div class="step">
-        <span>2</span>
-        <p>Details</p>
-      </div>
-
-      <div class="line"></div>
-
-      <div class="step">
-        <span>3</span>
-        <p>Confirm</p>
-      </div>
-    </div>
-  </div>
-
-
-
-
   <!-- contact section -->
   <section class="contact" id="contact">
     <div class="container">
 
       <h2 class="section-title">Contact <span id="highlighted">us</span></h2>
-      <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+      <p class="section-subtitle">Have a project in mind? Let’s discuss how we can bring it online.</p>
 
       <div class="contact-container">
         <div class="contact-info">
@@ -552,7 +568,7 @@
             </div>
             <div class="contact-text">
               <h3>Email</h3>
-              <a href="mailto:abrarilhamprogrammer@gmail.com">abrarilhamprogrammer@gmail.com</a>
+              <a href="mailto:abrarilhamprogrammer@gmail.com" style="text-transform: lowercase;">abrarilhamprogrammer@gmail.com</a>
             </div>
           </div>
 
@@ -573,7 +589,7 @@
             <div class="contact-text">
               <h3>Location</h3>
               <!-- <p>Chaittagong, Bangladesh</p> -->
-              <a href="">Bangladesh, Chaittagong</a>
+              <a href="https://www.google.com/maps/place/Chattogram/@22.3573954,91.819037,11z/data=!3m1!4b1!4m6!3m5!1s0x30acd8a64095dfd3:0x5015cc5bcb6905d9!8m2!3d22.3752075!4d91.8348606!16zL20vMDIxajM4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D">Bangladesh, Chaittagong</a>
             </div>
           </div>
 
@@ -640,11 +656,14 @@
           <!-- Review 1 -->
           <div class="review-card active">
             <p class="review-text">
-              They delivered a clean, fast website exactly as promised. Very professional and responsive.
+              Abrar Web Studio delivered exactly what we needed — a fast, clean, and professional website.
+              Communication was clear and delivery was on time.
             </p>
+
             <img src="images/myImg.png" alt="">
+            <p style="margin-bottom: 0; font-size: 1.2rem;">★★★★⯪</p>
             <h4>Rahim Ahmed</h4>
-            <span>Our Team Member</span>
+            <span>business owner</span>
           </div>
 
           <!-- Review 2 -->
@@ -653,6 +672,7 @@
               My portfolio looks amazing now. Great communication and affordable pricing.
             </p>
             <img src="images/anoymous.png" alt="">
+            <p style="margin-bottom: 0; font-size: 1.2rem;">★★★★☆</p>
             <h4>Nusrat Jahan</h4>
             <span>Freelancer</span>
           </div>
@@ -664,6 +684,7 @@
             </p>
             <img src="images/anoymous.png" alt="">
             <h4>Imran Hossain</h4>
+            <p style="margin-bottom: 0; font-size: 1.2rem;">★★★★★</p>
             <span>Startup Founder</span>
           </div>
         </div>
@@ -675,6 +696,58 @@
 
 
 
+  <!-- process section -->
+   <section class="process-section" id="process">
+  <div class="section-header">
+    <h2>Our Work Process</h2>
+    <p class="section-subtitle">
+      A simple, transparent workflow designed for clarity and results.
+    </p>
+  </div>
+
+  <div class="process-steps">
+    
+    <div class="process-card">
+      <span class="step-number">01</span>
+      <h3>Plan</h3>
+      <p>
+        We discuss your goals, audience, and requirements to understand
+        exactly what kind of website your business needs.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <span class="step-number">02</span>
+      <h3>Design</h3>
+      <p>
+        We create a clean, modern design that reflects your brand and
+        provides a great user experience across all devices.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <span class="step-number">03</span>
+      <h3>Develop</h3>
+      <p>
+        We turn the design into a fast, responsive, and optimized website
+        using clean and reliable code.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <span class="step-number">04</span>
+      <h3>Launch</h3>
+      <p>
+        After final testing and your approval, we launch the website and
+        make sure everything runs smoothly.
+      </p>
+    </div>
+
+  </div>
+  <a href="#pricing" class="random">View our pricing</a>
+</section>
+
+
 
 
 
@@ -683,7 +756,8 @@
     <div class="container">
       <h2>Tell Us About Your Project</h2>
       <p class="section-desc">
-        Answer a few quick questions so we can understand what kind of website you need.
+        Answer a few simple questions. This helps us understand your requirements
+        and provide the best solution for your business.
       </p>
 
       <div class="brief-start" id="briefStart">
@@ -802,51 +876,52 @@
 
 
   <!-- footer -->
-   <footer class="footer">
-  <div class="footer-container">
+  <footer class="footer">
+    <div class="footer-container">
 
-    <div class="footer-brand">
-      <h3>AAI Web Studio</h3>
-      <p>
-        We build fast, modern, and affordable websites for businesses and creators.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Company</h4>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-links">
-      <h4>Services</h4>
-      <a>Business Websites</a>
-      <a>Landing Pages</a>
-      <a>Portfolio Sites</a>
-      <a>SEO Optimization</a>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>📍 Chattogram, Bangladesh</p>
-      <p>📧 abrarilhamprogrammer@gmail.com</p>
-      <p>📞 +880 1330 910019</p>
-
-      <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <div class="footer-brand">
+        <h3>Abrar Web Studio</h3>
+        <p>
+          We design and develop fast, modern, and reliable websites
+          for businesses, startups, and creators worldwide.
+        </p>
       </div>
+
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a>Business Websites</a>
+        <a>Landing Pages</a>
+        <a>Portfolio Sites</a>
+        <a>SEO Optimization</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📍 Chattogram, Bangladesh</p>
+        <p>📧 abrarilhamprogrammer@gmail.com</p>
+        <p>📞 +880 1330 910019</p>
+
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 AAI Web Studio. All rights reserved.
-  </div>
-</footer>
+    <div class="footer-bottom">
+      © 2025 AAI Web Studio. All rights reserved.
+    </div>
+  </footer>
 
 
 
@@ -897,28 +972,30 @@
       localStorage.removeItem("currentStep");
     }
   </script>
-<script>
-  const toggleBtn = document.getElementById("themeToggle");
-  const body = document.body;
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
 
-  // Load saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
-  }
-
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
       toggleBtn.textContent = "☀️";
-    } else {
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌙";
     }
-  });
-</script>
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+      }
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
 
 
   <script src="script.js"></script>
