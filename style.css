@@ -244,7 +244,7 @@ h1 {
 /* sub navbar */
 .sub-navbar {
   position: fixed;
-  top: 88px; /* height of main navbar */
+  top: 90px; /*88px height of main navbar */
   z-index: 1200;
   background: var(--blue);
   color: var(--bg-light);
@@ -311,6 +311,7 @@ body.dark-mode .sub-nav-links a {
     padding: 2rem;
     min-width: 100%;
     max-width: 100%;
+    margin-top: 4rem;
 }
 
 .showcase {
@@ -2478,3 +2479,69 @@ li{
 }
 
 
+/* =========================
+   TOP INFO BAR
+========================= */
+
+.top-bar {
+  background: var(--bg-secondary);
+  color: var(--text-dark);
+  padding: 8px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+  z-index: 3000;
+  margin-top: 0vh;
+}
+
+.top-bar i {
+  margin-right: 6px;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-bar-right a {
+  color: var(--text-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.top-bar-right a:hover {
+  color: #ffffff;
+}
+
+.top-bar-right .whatsapp {
+  color: #25d366;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .top-bar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+section {
+  margin: 4rem 0;
+}

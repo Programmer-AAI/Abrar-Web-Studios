@@ -1,326 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      :root {
-        --clr-primary: var(--blue);
-        --bg-light: #f9f8f6;
-        --bg-secondary: #efe9e3;
-        --text-dark: #435663;
-        --blue: #0974bb;
-        --white: #ffffff;
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-      body {
-        background-color: var(--bg-secondary);
-      }
-      h1{
-        font-size: 3rem;
-        margin-top: 15rem;
-        /* margin-bottom: 10rem; */
-        padding-bottom: 5rem;
-        color: #435663 !important;
-      }
-      .tri-img {
-        column-count: 3;
-        column-gap: 2rem;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Abrar Web Studio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root {
+      --blue: #0974bb;
+      --bg: #efe9e3;
+      --dark: #435663;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    span { color: var(--blue); }
+
+    /* ================= NAVBAR ================= */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav .nav-links a {
+      margin: 0 0.7rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav .btn {
+      background: var(--blue);
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    /* ================= HEADER ================= */
+    .gallery-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .gallery-header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-header p {
+      font-size: 1.05rem;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    /* ================= GALLERY ================= */
+    .gallery {
+      column-count: 3;
+      column-gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+
+    .img-card {
+      position: relative;
+      margin-bottom: 2rem;
+      break-inside: avoid;
+      cursor: pointer;
+    }
+
+    .img-card img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+    }
+
+    .img-card:hover img {
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .img-info {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      color: white;
+      border-radius: 0 0 12px 12px;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .img-card:hover .img-info {
+      opacity: 1;
+    }
+
+    .img-info h4 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .img-info p {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Hide extra images */
+    .gallery:not(.show-all) .img-card:nth-child(n+4) {
+      display: none;
+    }
+
+    /* ================= BUTTON ================= */
+    .see-more {
+      display: block;
+      margin: 3rem auto 4rem;
+      padding: 14px 40px;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .see-more:hover {
+      background: #065d97;
+      transform: translateY(-2px);
+    }
+
+    /* ================= LIGHTBOX ================= */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox-content {
+      text-align: center;
+      color: white;
+      max-width: 90%;
+      animation: zoom 0.3s ease;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 12px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    @keyframes zoom {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: var(--dark);
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: #efe9e3;
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 1;
       }
 
-      .tri-img img {
-        width: 100%;
-        margin-bottom: 2rem;
-        border-radius: 10px;
-        border: 2px solid black;
-        break-inside: avoid;
-      }
-      .tri-img img {
-        cursor: pointer;
-      }
-      .tri-img:not(.show-all) .img-card:nth-child(n + 4) {
+      nav .nav-links {
         display: none;
       }
+    }
+  </style>
+</head>
 
-      .tri-img.show-all img {
-        display: block;
-      }
-      .see-more {
-        display: block;
-        margin: 2rem auto;
-        padding: 12px 30px;
-        font-size: 1.2rem;
-        border-radius: 8px;
-        border: none;
-        background: black;
-        color: white;
-        cursor: pointer;
-      }
-      .lightbox {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.85);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-      }
+<body>
 
-      .lightbox img {
-        max-width: 90%;
-        max-height: 90%;
-        border-radius: 10px;
-      }
-
-      .lightbox .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 3rem;
-        color: white;
-        cursor: pointer;
-      }
-      .see-more {
-        transition: background 0.3s ease, transform 0.2s ease;
-      }
-
-      .see-more:hover {
-        transform: scale(1.05);
-      }
-
-      @media (max-width: 768px) {
-        .tri-img {
-          column-count: 1;
-        }
-      }
-      .img-card {
-        position: relative;
-        margin-bottom: 2rem;
-        break-inside: avoid;
-      }
-
-      .img-card img {
-        width: 100%;
-        display: block;
-        border-radius: 10px;
-        border: 2px solid black;
-        cursor: pointer;
-      }
-      .img-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 0.9rem 1rem;
-        background: rgba(0, 0, 0, 0.75);
-        color: white;
-        border-radius: 0 0 10px 10px;
-        opacity: 0;
-        transition: 0.3s ease;
-        pointer-events: none;
-      }
-
-      .img-card:hover .img-info {
-        opacity: 1;
-      }
-
-      .img-card:hover .img-info {
-        opacity: 1;
-      }
-
-      .img-info h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
-        color: #ffffff;
-      }
-
-      .img-info p {
-        font-size: 0.9rem;
-        opacity: 0.85;
-        color: #f9f8f6;
-      }
-      .lightbox-content {
-        text-align: center;
-        color: white;
-        max-width: 90%;
-        height: 70vh;
-        align-self: center;
-      }
-
-      .lightbox-content h3 {
-        margin-top: 1rem;
-        font-size: 1.6rem;
-      }
-
-      .lightbox-content p {
-        margin-top: 0.5rem;
-        opacity: 0.8;
-        color: white;
-      }
-      .img-info {
-        transform: translateY(10px);
-      }
-
-      .img-card:hover .img-info {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar">
-      <img src="images/logo.png" class="logo" alt="Logo">
-
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <div class="nav-links" id="navLinks">
-        <a href="index.html#t-c">Home</a>
-        <a href="index.html">Services</a>
-        <a href="index.html#pricing">pricing</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">contact</a>
-        <a href="index.html#reviews">Reviews</a>
-        <a href="index.html#faq">FAQ</a>
-      </div>
-      <div class="nav-buttons" id="navButtons">
-        <a href="index.html#home" class="btn btn-primary a">BACK TO MAIN PAGE</a>
-      </div>
-    </nav>
-    <h1>Our Gallery</h1>
-    <div class="tri-img" id="gallery">
-      <div class="img-card">
-        <img
-          src="posts/post-1.png"
-          data-title="Creative Branding"
-          data-desc="Modern identity design for startups"
-        />
-        <div class="img-info">
-          <h4>Creative Branding</h4>
-          <p>Modern identity design</p>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img
-          src="images/logo2.png"
-          data-title="Our Logo"
-          data-desc="Satisfied Many User"
-        />
-        <div class="img-info">
-          <h4>Our Logo</h4>
-          <p>Satisfied Many User</p>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img
-          src="posts/post-3.webp"
-          data-title="Creative Branding"
-          data-desc="Modern identity design for startups"
-        />
-        <div class="img-info">
-          <h4>Creative Branding</h4>
-          <p>Modern identity design</p>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img
-          src="images/pexels-pixabay-265087.jpg"
-          data-title="Creative Branding"
-          data-desc="Modern identity design for startups"
-        />
-        <div class="img-info">
-          <h4>Creative Branding</h4>
-          <p>Modern identity design</p>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img
-          src="images/pexels-pixabay-265087.jpg"
-          data-title="Creative Branding"
-          data-desc="Modern identity design for startups"
-        />
-        <div class="img-info">
-          <h4>Creative Branding</h4>
-          <p>Modern identity design</p>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img
-          src="images/pexels-pixabay-265087.jpg"
-          data-title="Creative Branding"
-          data-desc="Modern identity design for startups"
-        />
-        <div class="img-info">
-          <h4>Creative Branding</h4>
-          <p>Modern identity design</p>
-        </div>
-      </div>
-
-      <!-- repeat same pattern -->
+  <!-- NAV -->
+  <nav>
+    <img src="images/logo.png" alt="Logo">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-    <button class="see-more" id="toggleGalleryBtn">See More</button>
-    <div class="lightbox" id="lightbox">
-      <span class="close">&times;</span>
+    <a href="index.html" class="btn">Back to Home</a>
+  </nav>
 
-      <div class="lightbox-content">
-        <img id="lightboxImg" />
-        <h3 id="lightboxTitle"></h3>
-        <p id="lightboxDesc"></p>
+  <!-- HEADER -->
+  <section class="gallery-header">
+    <h1>Our <span>Gallery</span></h1>
+    <p>
+      A curated showcase of our branding, design, and web projects crafted
+      for real businesses.
+    </p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="img-card">
+      <img src="posts/post-1.png" data-title="Creative Branding" data-desc="Modern identity design">
+      <div class="img-info">
+        <h4>Creative Branding</h4>
+        <p>Modern identity design</p>
       </div>
     </div>
-    <h1>Thanks for Exploring About Us<a href="index.html#home"> WANNA GO BACK</a></h1>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightboxImg");
-        const closeBtn = document.querySelector(".close");
-        const toggleBtn = document.getElementById("toggleGalleryBtn");
-        const gallery = document.getElementById("gallery");
 
-        const images = document.querySelectorAll(".img-card img");
-        const lightboxTitle = document.getElementById("lightboxTitle");
-        const lightboxDesc = document.getElementById("lightboxDesc");
+    <div class="img-card">
+      <img src="images/logo2.png" data-title="Our Logo" data-desc="Brand identity">
+      <div class="img-info">
+        <h4>Our Logo</h4>
+        <p>Brand identity</p>
+      </div>
+    </div>
 
-        /* Image popup */
-        images.forEach((img) => {
-          img.addEventListener("click", () => {
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-            lightboxTitle.textContent = img.dataset.title;
-            lightboxDesc.textContent = img.dataset.desc;
-          });
-        });
+    <div class="img-card">
+      <img src="posts/post-2.png" data-title="Visual Design" data-desc="Creative layouts">
+      <div class="img-info">
+        <h4>Visual Design</h4>
+        <p>Creative layouts</p>
+      </div>
+    </div>
 
-        closeBtn.onclick = () => {
-          lightbox.style.display = "none";
-        };
+    <div class="img-card">
+      <img src="images/pexels-pixabay-265087.jpg" data-title="Web Design" data-desc="Clean UI design">
+      <div class="img-info">
+        <h4>Web Design</h4>
+        <p>Clean UI design</p>
+      </div>
+    </div>
+  </section>
 
-        lightbox.onclick = (e) => {
-          if (e.target !== lightboxImg) {
-            lightbox.style.display = "none";
-          }
-        };
+  <button class="see-more" id="toggleBtn">See More</button>
 
-        /* Show / Hide toggle */
-        toggleBtn.onclick = () => {
-          gallery.classList.toggle("show-all");
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightImg">
+      <h3 id="lightTitle"></h3>
+      <p id="lightDesc"></p>
+    </div>
+  </div>
 
-          if (gallery.classList.contains("show-all")) {
-            toggleBtn.textContent = "Hide";
-          } else {
-            toggleBtn.textContent = "See More";
-            gallery.scrollIntoView({ behavior: "smooth" });
-          }
-        };
-      });
-    </script>
-  </body>
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Thanks for exploring —
+      <a href="index.html#pricing">Start your project with us</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const gallery = document.getElementById("gallery");
+    const btn = document.getElementById("toggleBtn");
+    const lightbox = document.getElementById("lightbox");
+    const lightImg = document.getElementById("lightImg");
+    const lightTitle = document.getElementById("lightTitle");
+    const lightDesc = document.getElementById("lightDesc");
+    const close = document.querySelector(".close");
+
+    document.querySelectorAll(".img-card img").forEach(img => {
+      img.onclick = () => {
+        lightbox.style.display = "flex";
+        lightImg.src = img.src;
+        lightTitle.textContent = img.dataset.title;
+        lightDesc.textContent = img.dataset.desc;
+      };
+    });
+
+    close.onclick = () => lightbox.style.display = "none";
+    lightbox.onclick = e => e.target === lightbox && (lightbox.style.display = "none");
+
+    btn.onclick = () => {
+      gallery.classList.toggle("show-all");
+      btn.textContent = gallery.classList.contains("show-all") ? "Hide" : "See More";
+    };
+  </script>
+
+</body>
 </html>
