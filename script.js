@@ -12,6 +12,8 @@ if (menuToggle) {
 window.addEventListener("scroll", () => {
   document.querySelector(".navbar")
     .classList.toggle("scrolled", window.scrollY > 10);
+    navLinks.classList.remove("active");
+        navButtons.classList.remove("active");
 });
 
 // Carousel Functionality
